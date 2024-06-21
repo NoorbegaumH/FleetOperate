@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { Status } from "../../enums/shipment.enum";
 import { ShipmentService } from "../../services/shipment.service";
 import { Location } from "@angular/common";
+import { cities } from "../../utils/autocomplete.utils";
 
 @Component({
   selector: "app-create-shipment",
@@ -17,6 +18,7 @@ export class CreateShipmentComponent {
   ) {}
 
   shipmentForm!: FormGroup;
+  cities = cities;
 
   ngOnInit(): void {
     this.createForm();

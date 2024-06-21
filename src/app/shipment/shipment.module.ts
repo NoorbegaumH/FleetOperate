@@ -19,6 +19,7 @@ import { MatDialogModule } from "@angular/material/dialog";
 import { StatusDialogComponent } from "./elements/status-dialog/status-dialog.component";
 import { MatTooltipModule } from "@angular/material/tooltip";
 import { CommonModule } from "@angular/common";
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { CommonModule } from "@angular/common";
     MatStepperModule,
     MatDialogModule,
     MatTooltipModule,
-    CommonModule
+    CommonModule,
+    MatAutocompleteModule
   ],
   providers: [provideNativeDateAdapter()],
 })
