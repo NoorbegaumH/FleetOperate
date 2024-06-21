@@ -1,0 +1,60 @@
+.create-shipment-title {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.create-shipment-container {
+  background-color: #fff;
+
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-self: center
+}
+
+.button-container {
+  padding: 0 20px;
+  justify-content: flex-end;
+}
+
+.header {
+  position: relative;
+}
+
+.form-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+mat-form-field {
+  width: 460px;
+}
+
+::ng-deep .mdc-notched-outline {
+  height: 84% !important;
+}
+
+::ng-deep
+  .mat-mdc-text-field-wrapper
+  .mat-mdc-form-field-flex
+  .mat-mdc-floating-label {
+  top: 50% !important;
+  font-size: 14px !important;
+}
+
+::ng-deep
+  .mat-mdc-text-field-wrapper.mdc-text-field--outlined
+  .mat-mdc-form-field-infix {
+  padding-top: 11px;
+  padding-bottom: 0px;
+  font-size: 14px !important;
+}
+
+::ng-deep .mat-mdc-option .mdc-list-item__primary-text {
+  font-size: 14px !important;
+}

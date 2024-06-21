@@ -1,0 +1,17 @@
+<h1 mat-dialog-title>Update Status</h1>
+<div class="dial-container" mat-dialog-content>
+    <form [formGroup]="statusForm">
+        <mat-form-field fullwidth appearance="outline">
+            <mat-label>Shipment Status</mat-label>
+            <mat-select formControlName="status">
+                @for (status of statuses; track status) {
+                <mat-option [value]="status.value">{{status.viewValue}}</mat-option>
+                }
+            </mat-select>
+        </mat-form-field>
+    </form>
+</div>
+<div class="button-cont" mat-dialog-actions>
+    <button mat-button (click)="onCancel()">Cancel</button>
+    <button mat-raised-button color="primary" (click)="onSave()">Save</button>
+</div>
