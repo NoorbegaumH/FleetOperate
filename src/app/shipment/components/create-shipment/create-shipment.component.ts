@@ -1,9 +1,8 @@
 import { Component } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
-import { Router } from "@angular/router";
-import { Shipment } from "../../interfaces/shipment.model";
 import { Status } from "../../enums/shipment.enum";
 import { ShipmentService } from "../../services/shipment.service";
+import { Location } from "@angular/common";
 
 @Component({
   selector: "app-create-shipment",
@@ -12,7 +11,7 @@ import { ShipmentService } from "../../services/shipment.service";
 })
 export class CreateShipmentComponent {
   constructor(
-    private route: Router,
+    private location: Location,
     private fb: FormBuilder,
     private shipmentService: ShipmentService
   ) {}
@@ -59,6 +58,6 @@ export class CreateShipmentComponent {
   }
 
   goBack() {
-    this.route.navigate(["/"]);
+    this.location.back();
   }
 }

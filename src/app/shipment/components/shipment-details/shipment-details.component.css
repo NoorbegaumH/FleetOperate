@@ -23,11 +23,11 @@ mat-header-row {
   width: 50px;
 }
 
-.mat-cell,
-.mat-header-cell {
+.adress-field {
   white-space: nowrap !important;
   overflow: hidden;
-  text-overflow: ellipsis;
+  text-overflow: ellipsis !important;
+  width: 400px;
 }
 
 .mat-cell {
@@ -37,4 +37,39 @@ mat-header-row {
 mat-table {
   max-height: 70vh;
   overflow: scroll;
+}
+
+.mat-column-pickupDate {
+  flex: 0 0 10%;
+}
+
+.mat-column-deliveryDate {
+  flex: 0 0 10%;
+}
+
+.mat-column-pickupAddress {
+  flex: 0 0 30%;
+}
+
+.mat-column-deliveryAddress {
+  flex: 0 0 30%;
+}
+
+.mat-column-status {
+  flex: 0 0 10%;
+}
+
+.small-button {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.small-button .mat-icon {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 3px;
 }

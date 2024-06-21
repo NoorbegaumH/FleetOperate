@@ -1,6 +1,8 @@
 <div class="container create-shipment-container">
     <div class="flex header">
-        <button color="primary" mat-button (click)="goBack()"><mat-icon>arrow_back</mat-icon>Back</button>
+        <button color="primary" mat-button (click)="goBack()">
+            <mat-icon>arrow_back</mat-icon>Back
+        </button>
         <h2 class="create-shipment-title">Create Shipment</h2>
     </div>
     <form [formGroup]="shipmentForm" (ngSubmit)="onSubmit()">
@@ -15,6 +17,9 @@
                             <input formControlName="pickupDate" matInput [matDatepicker]="picker">
                             <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                             <mat-datepicker #picker></mat-datepicker>
+                            <mat-error *ngIf="shipmentForm.get('pickup.pickupDate')?.hasError('required')">
+                                Pickup Date is required
+                            </mat-error>
                         </mat-form-field>
                     </div>
                     <ng-container formGroupName="address">
@@ -23,30 +28,49 @@
                                 <mat-label>Street Address</mat-label>
                                 <input matInput type="text" formControlName="streetAddress"
                                     placeholder="Street Address">
+                                <mat-error
+                                    *ngIf="shipmentForm.get('pickup.address.streetAddress')?.hasError('required')">
+                                    Street Address is required
+                                </mat-error>
                             </mat-form-field>
                         </div>
                         <div class="form-group">
                             <mat-form-field appearance="outline">
                                 <mat-label>City</mat-label>
                                 <input matInput type="text" formControlName="city" placeholder="City">
+                                <mat-error *ngIf="shipmentForm.get('pickup.address.city')?.hasError('required')">
+                                    City is required
+                                </mat-error>
                             </mat-form-field>
                         </div>
                         <div class="form-group">
                             <mat-form-field appearance="outline">
                                 <mat-label>State</mat-label>
                                 <input matInput type="text" formControlName="state" placeholder="State">
+                                <mat-error *ngIf="shipmentForm.get('pickup.address.state')?.hasError('required')">
+                                    State is required
+                                </mat-error>
                             </mat-form-field>
                         </div>
                         <div class="form-group">
                             <mat-form-field appearance="outline">
                                 <mat-label>Zip Code</mat-label>
                                 <input matInput type="text" formControlName="zipcode" placeholder="Zip Code">
+                                <mat-error *ngIf="shipmentForm.get('pickup.address.zipcode')?.hasError('required')">
+                                    Zip Code is required
+                                </mat-error>
+                                <mat-error *ngIf="shipmentForm.get('pickup.address.zipcode')?.hasError('pattern')">
+                                    Zip Code must be a valid format
+                                </mat-error>
                             </mat-form-field>
                         </div>
                         <div class="form-group">
                             <mat-form-field appearance="outline">
                                 <mat-label>Country</mat-label>
                                 <input matInput type="text" formControlName="country" placeholder="Country">
+                                <mat-error *ngIf="shipmentForm.get('pickup.address.country')?.hasError('required')">
+                                    Country is required
+                                </mat-error>
                             </mat-form-field>
                         </div>
                     </ng-container>
@@ -63,6 +87,9 @@
                             <input formControlName="deliveryDate" matInput [matDatepicker]="deliverypicker">
                             <mat-datepicker-toggle matIconSuffix [for]="deliverypicker"></mat-datepicker-toggle>
                             <mat-datepicker #deliverypicker></mat-datepicker>
+                            <mat-error *ngIf="shipmentForm.get('delivery.deliveryDate')?.hasError('required')">
+                                Delivery Date is required
+                            </mat-error>
                         </mat-form-field>
                     </div>
                     <ng-container formGroupName="address">
@@ -71,33 +98,52 @@
                                 <mat-label>Street Address</mat-label>
                                 <input matInput type="text" formControlName="streetAddress"
                                     placeholder="Street Address">
+                                <mat-error
+                                    *ngIf="shipmentForm.get('delivery.address.streetAddress')?.hasError('required')">
+                                    Street Address is required
+                                </mat-error>
                             </mat-form-field>
                         </div>
-                        <div class="form-group col-md-6">
+                        <div class="form-group">
                             <mat-form-field appearance="outline">
                                 <mat-label>City</mat-label>
                                 <input matInput type="text" formControlName="city" placeholder="City">
+                                <mat-error *ngIf="shipmentForm.get('delivery.address.city')?.hasError('required')">
+                                    City is required
+                                </mat-error>
                             </mat-form-field>
                         </div>
-                        <div class="form-group col-md-4">
+                        <div class="form-group">
                             <mat-form-field appearance="outline">
                                 <mat-label>State</mat-label>
                                 <input matInput type="text" formControlName="state" placeholder="State">
+                                <mat-error *ngIf="shipmentForm.get('delivery.address.state')?.hasError('required')">
+                                    State is required
+                                </mat-error>
                             </mat-form-field>
                         </div>
-                        <div class="form-group col-md-2">
+                        <div class="form-group">
                             <mat-form-field appearance="outline">
                                 <mat-label>Zip Code</mat-label>
                                 <input matInput type="text" formControlName="zipcode" placeholder="Zip Code">
+                                <mat-error *ngIf="shipmentForm.get('delivery.address.zipcode')?.hasError('required')">
+                                    Zip Code is required
+                                </mat-error>
+                                <mat-error *ngIf="shipmentForm.get('delivery.address.zipcode')?.hasError('pattern')">
+                                    Zip Code must be a valid format
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div class="form-group">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Country</mat-label>
+                                <input matInput type="text" formControlName="country" placeholder="Country">
+                                <mat-error *ngIf="shipmentForm.get('delivery.address.country')?.hasError('required')">
+                                    Country is required
+                                </mat-error>
                             </mat-form-field>
                         </div>
                     </ng-container>
-                    <div class="form-group">
-                        <mat-form-field appearance="outline">
-                            <mat-label>Country</mat-label>
-                            <input matInput type="text" formControlName="country" placeholder="Country">
-                        </mat-form-field>
-                    </div>
                 </div>
             </div>
 
