@@ -41,7 +41,9 @@
 
             <ng-container matColumnDef="status">
                 <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
-                <mat-cell *matCellDef="let shipment"> {{ shipment.status }} </mat-cell>
+                <mat-cell *matCellDef="let shipment"> <span class="chips" [ngClass]="getStatusClass(shipment.status)">{{
+                        shipment.status }}</span>
+                </mat-cell>
             </ng-container>
 
             <ng-container matColumnDef="actions">

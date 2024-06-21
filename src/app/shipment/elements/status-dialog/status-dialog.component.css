@@ -13,3 +13,7 @@ mat-form-field {
   margin-top: 0px;
   margin-bottom: 10px;
 }
+
+h2 {
+  padding-bottom: 0px;
+}

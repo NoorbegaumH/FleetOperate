@@ -90,4 +90,19 @@ export class ShipmentDetailsComponent implements AfterViewInit, OnInit {
   formatAddress(address: any): string {
     return `${address.streetAddress}, ${address.city}, ${address.state} ${address.zipcode}, ${address.country}`;
   }
+
+  getStatusClass(status: string): string {
+    switch (status.toLowerCase()) {
+        case 'created':
+            return 'created-blue';
+        case 'dispatched':
+            return 'dispatched-orange';
+        case 'on the way':
+            return 'on-the-way-yellow';
+        case 'delivered':
+            return 'delivered-green';
+        default:
+            return '';
+    }
+}
 }

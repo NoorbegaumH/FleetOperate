@@ -7,13 +7,12 @@
 
 .create-shipment-container {
   background-color: #fff;
-
 }
 
 .form-container {
   display: flex;
   align-items: center;
-  justify-self: center
+  justify-self: center;
 }
 
 .button-container {

@@ -73,3 +73,26 @@ mat-table {
   text-align: center;
   margin-top: 3px;
 }
+
+.created-blue {
+  background-color: #aedbff;
+}
+
+.chips {
+  height: 18px;
+  border-radius: 20px;
+  padding: 2px 5px;
+  font-size: 12px;
+}
+
+.dispatched-orange {
+  background-color: #ffd391;
+}
+
+.on-the-way-yellow {
+  background-color: #fef49b;
+}
+
+.delivered-green {
+  background-color: #a4ffa7;
+}
