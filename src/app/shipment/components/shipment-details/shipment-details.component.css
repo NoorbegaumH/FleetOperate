@@ -57,6 +57,7 @@ mat-table {
 
 .mat-column-status {
   flex: 0 0 10%;
+  justify-content: center;
 }
 
 .small-button {
@@ -81,7 +82,7 @@ mat-table {
 .chips {
   height: 18px;
   border-radius: 20px;
-  padding: 2px 5px;
+  padding: 2px 10px;
   font-size: 12px;
 }
 

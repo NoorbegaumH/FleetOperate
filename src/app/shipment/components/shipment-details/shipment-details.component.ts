@@ -93,16 +93,16 @@ export class ShipmentDetailsComponent implements AfterViewInit, OnInit {
 
   getStatusClass(status: string): string {
     switch (status.toLowerCase()) {
-        case 'created':
-            return 'created-blue';
-        case 'dispatched':
-            return 'dispatched-orange';
-        case 'on the way':
-            return 'on-the-way-yellow';
-        case 'delivered':
-            return 'delivered-green';
-        default:
-            return '';
+      case "created":
+        return "created-blue";
+      case "dispatched":
+        return "dispatched-orange";
+      case "on the way":
+        return "on-the-way-yellow";
+      case "delivered":
+        return "delivered-green";
+      default:
+        return "";
     }
-}
+  }
 }
